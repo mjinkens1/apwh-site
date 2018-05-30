@@ -1,0 +1,667 @@
+
+
+body {
+  font-family: "Ubuntu", serif;
+  background: linear-gradient(rgb(220, 220, 220) 0%, rgb(190, 190, 190) 100%) no-repeat;
+  overflow: auto;
+}
+
+a,
+button {
+  text-decoration: none !important;
+}
+
+video {
+  background: #000;
+}
+
+.heading {
+  width: 5%;
+  margin: .7em auto;
+  overflow: hidden;
+  font-family: "Arvo", serif;
+  text-align: center;
+  color: rgb(220, 220, 220);
+}
+
+.heading:before,
+.heading:after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  margin: 0 .5em 0 -23%;
+  vertical-align: middle;
+  border-bottom: 5px solid;
+	color: rgb(220, 220, 220);
+}
+
+.heading:after {
+  margin: 0 -25% 0 .5em;
+}
+
+.bg-img {
+  position: relative;
+  top: 58px;
+  background-image: url(http://www.trbimg.com/img-587f903c/turbine/os-9-prominent-early-astronauts-carrying-on-u-s-space-history-20170118);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: none;
+  background-position: 0% 0%;
+}
+
+.syllabus-wrapper {
+  position: relative;
+  top: 58px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: none;
+  background-position: 0% 0%;
+}
+
+.jumbotron,
+.card {
+  border-radius: 0;
+  background: rgb(230, 230, 230);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.theme1 {
+  font-size: 12px;
+  color: rgb(220, 220, 220) !important;
+  background: linear-gradient(140deg, rgb(102, 153, 255) 2%, rgb(255, 102, 255));
+  box-shadow: 0px 2px 1px rgb(90, 90, 80);
+}
+
+.theme2 {
+  font-size: 15px;
+  color: rgb(220, 220, 220) !important;
+  background: transparent;
+}
+
+#sidebar-toggle:hover {
+  color: rgb(47, 42, 34) !important;
+  transition: transform 0.2s;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  min-height: 150px;
+  /* height: 100%; */
+  background: linear-gradient(140deg, rgb(60, 60, 60) 2%, rgb(80, 80, 80));
+}
+
+.footer-col {
+  font-size: .8em;
+  height: 130px;
+  color: rgb(120, 120, 120);
+}
+
+.footer-info1::after {
+  display: block;
+  vertical-align: top;
+  content: "";
+  border-top: solid;
+  border-width: 2px;
+  border-color: rgb(102, 153, 255);
+  opacity: 0.5;
+}
+
+.footer-info2::after {
+  display: block;
+  vertical-align: top;
+  content: "";
+  border-top: solid;
+  border-width: 2px;
+  border-color: rgb(255, 102, 255);
+  opacity: 0.5;
+}
+
+.footer a {
+  color: rgb(120,120,120) !important;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+nav.navbar.shrink {
+  padding-bottom: 0;
+  padding-top: 0;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+nav.navbar.expand {
+  -webkit-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.nav-icon {
+  font-weight: bold;
+  font-size:15px;
+  padding-top: 10px;
+}
+
+.tooltip-text {
+  font-weight: bold;
+  width: auto;
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  background: linear-gradient(140deg, rgb(60, 60, 60) 2%, rgb(80, 80, 80));
+}
+
+.tooltip-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 20px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(60, 60, 60) transparent;
+}
+
+.tooltip-text-logout {
+  width: 20em;
+  font-weight: bold;
+  display: none;
+  position: absolute;
+  right: 2em;
+  background: rgb(220,220,220);
+}
+
+.btn-dark {
+  /* font-weight: bold; */
+  background: rgb(60,60,60) !important;
+}
+
+.btn-dark:hover {
+  opacity: 0.9;
+}
+
+.nav-item:hover .tooltip-text,
+.nav-item:hover .tooltip-text-logout {
+  display:block;
+}
+
+#admin {
+  color: rgb(245, 92, 245) !important;
+}
+
+#sidebar {
+  position: fixed;
+  z-index: 6;
+  height: 100vh;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#sidebar .list-group-item {
+  font-size: 15px;
+  border-radius: 0;
+  color: rgb(220, 220, 220);
+  background: transparent;
+  white-space: nowrap;
+}
+
+/*highlight hovered item  */
+#sidebar .list-group-item:hover {
+  background: linear-gradient(140deg, rgba(102, 153, 255, 0.8) 80%, rgba(255, 102, 255, 0.8));
+}
+
+/* closed state */
+#sidebar .list-group .list-group-item[aria-expanded="false"]::after {
+  content: " \f078";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+}
+
+/* open state */
+#sidebar .list-group .list-group-item[aria-expanded="true"] {
+  background: linear-gradient(140deg, rgb(102, 153, 255) 80%, rgb(255, 102, 255));
+}
+
+#sidebar .list-group .list-group-item[aria-expanded="true"]::after {
+  content: " \f077";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+}
+
+/* change transition animation to width when entire sidebar is toggled */
+#sidebar.collapse {
+  -webkit-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out;
+}
+
+#sidebar.collapsing {
+  width: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+#ssuil {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 400px;
+  height: 75px;
+  border: none !important;
+  visibility: hidden;
+}
+
+#link-update:hover > #ssuil {
+  visibility: visible;
+}
+
+.calendar-header {
+  height: 100px;
+  font-family: "PT Sans", serif;
+  background: rgb(60, 60, 60);
+}
+
+.calendar-header-c {
+  height: 100px;
+  font-family: "PT Sans", serif;
+  background: radial-gradient(55%  60%, rgba(60, 60, 60, 0.93), rgb(60, 60, 60));
+}
+
+.calendar-weekdays {
+  font-family: "PT Sans", serif;
+  font-size: 100%;
+}
+
+.calendar-day {
+  font-family: "PT Sans", serif;
+  display: inline-block;
+  position: relative;
+  text-align: top;
+  text-align: right;
+  padding: 0px;
+  color: rgb(60, 60, 60);
+  height: 70px;
+  overflow: hidden;
+}
+
+.calendar-day:hover {
+  background: radial-gradient(55%  60%, rgba(102, 153, 255, 0.6), rgba(102, 153, 255, 0.7));
+}
+
+.calendar-day > i {
+  position: relative;
+  top: 50px;
+  float: left;
+}
+
+.calendar-active:not(span) {
+   background: radial-gradient(55%  60%, rgba(102, 153, 255, 0.6), rgba(102, 153, 255, 0.7));
+}
+
+.calendar-day span {
+  position: relative;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: solid;
+  border-top-width: 50px;
+  color: rgb(220, 220, 220);
+  background: rgb(60, 60, 60);
+  border-color: rgb(60, 60, 60);
+}
+
+.calendar-day span[today="true"] {
+  color: rgb(220, 220, 220);
+  background: rgb(102, 153, 255);
+  border-color: rgb(102, 153, 255);
+}
+
+.calendar-day[last_month="true"],
+.calendar-day[next_month="true"]{
+  background: rgb(180, 180, 180);
+}
+
+.calendar-day[last_month="true"]:hover,
+.calendar-day[next_month="true"]:hover{
+  background: radial-gradient(55%  60%, rgba(102, 153, 255, 0.6), rgba(102, 153, 255, 0.7));
+}
+
+.calendar-day .cal-icons {
+  position: relative;
+  text-align: initial;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: none;
+  color: rgb(60, 60, 60);
+  background: transparent;
+  float: left;
+}
+
+.cal-icons .fa-pencil-alt,
+.cal-icons .fa-calendar-check,
+.cal-icons .fa-info-circle {
+  visibility: hidden;
+  float: left;
+  padding-top : auto;
+  padding-bottom: auto;
+}
+
+.day-header {
+  font-family: "PT Sans", serif;
+  height: 100px;
+}
+
+.cal-header-year {
+  color: rgb(220, 220, 220);
+  font-size: 200%;
+  line-height: 20%;
+}
+
+.cal-header-month {
+  color: rgb(220, 220, 220);
+  font-size: 200%;
+  line-height: 210%;
+}
+
+.cal-nav {
+  color: rgb(220, 220, 220) !important;
+  font-size: 38px !important;
+  line-height: 250%;
+}
+
+.cal-nav:hover {
+  color: rgb(102, 153, 255) !important;
+}
+
+.cal-refresh {
+  position: absolute;
+  top: 8%;
+  right: 4%;
+}
+
+.cal-refresh-btn {
+  font-size: 20px;
+  color: rgb(220, 220, 220) !important;
+}
+
+.cal-refresh-btn:hover {
+  color: rgb(102, 153, 255) !important;
+}
+
+
+.day-of-week {
+  position: relative;
+  font-size: 150%;
+  line-height: 400%;
+}
+
+.day-of-week-header {
+  font-family: "PT Sans", serif;
+  color: rgb(220, 220, 220);
+  background: radial-gradient(55% 60%, rgba(60, 60, 60, 0.95), rgb(60, 60, 60));
+}
+
+.day-number-header {
+  font-family: "PT Sans", serif;
+  width: 100%;
+  border-left: solid;
+  border-right: solid;
+  border-width: 2px;
+  border-color: rgb(102, 153, 255);
+  color: rgb(220, 220, 220);
+  background: radial-gradient(55% 60%, rgba(60, 60, 60, 0.95), rgb(60, 60, 60));
+}
+
+#day-selection-name {
+  line-height: 10%;
+}
+
+#day-selection-number {
+  font-size: 180%;
+  line-height: 100%;
+}
+
+#month-selection {
+  font-size: 140%;
+  line-height: 50%;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-body {
+  box-shadow: 0px 1px 1px inset rgba(90,90,90,0.5);
+}
+
+#accordion .card-body {
+  font-size: 15px;
+  height: 229px;
+  box-shadow: 0px 0px 0px rgba(90,90,90,0);
+}
+
+.card-button {
+  float: right;
+  background: transparent;
+  color: rgb(102, 153, 255);
+  transition: all 0.2s;
+}
+
+.card-button:hover {
+  color: rgb(60, 60, 60);
+}
+
+.main {
+  height: calc(100vh - 200px) !important;
+}
+
+.syllabus {
+  height: calc(100vh - 58px) !important;
+}
+
+.info-header {
+  font-family: "Georgia", serif;
+  color: rgb(60, 60, 60) !important;
+}
+
+.info-header::after {
+  display: block;
+  vertical-align: top;
+  content: "";
+  border-top: solid;
+  border-width: 2px;
+  border-color: rgb(60, 60, 60);
+}
+
+.header-icon {
+  font-size: 20px;
+  float: right;
+  color: rgb(60, 60, 60);
+}
+
+.info-wrapper {
+  height: 230px;
+  overflow-y: auto;
+}
+
+.info-box {
+    /* background: rgba(220, 220, 220, 1) !important; */
+  background: rgba(102, 153, 255, 0.2) !important;
+  font-family: "Georgia", serif;
+  box-shadow: -1px 1px 1px rgba(90, 90, 90,0.5);
+}
+
+.bg-img-error {
+  background-image: url("../images/mopar.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: none;
+  height: 100vh !important;
+}
+
+.error-box {
+  font-size: 3em;
+  font-family : "Alegreya", serif;
+  bottom: 0;
+  border: solid !important;
+  border-width: 10px;
+	border-color: rgb(220,220,220);
+  color: rgb(220,220,220);
+  background: rgba(0,0,0,0.3)
+}
+
+.popup {
+  position: fixed;
+  z-index: 6;
+  height: calc(100vh - 50px);
+  top: 50px;
+}
+
+#email-wrapper,
+#login-wrapper {
+  transform: scale(0,0);
+  transition: all 0.2s;
+}
+
+.admin a {
+  text-decoration: none !important;
+}
+
+.admin-save,
+.admin-delete {
+  position: relative;
+  z-index: 5;
+  float: right;
+  color: rgb(60,60,60);
+}
+
+.admin-save:hover,
+.admin-delete:hover {
+  float: right;
+  color: rgb(60,60,60);
+  opacity: 0.8;
+}
+
+.admin-save-all,
+.admin-delete-all,
+.admin-add,
+.admin-add-file,
+.admin-remove {
+  float: right;
+  color: rgb(60, 60, 60);
+}
+
+.airnote {
+  background: rgba(102, 153, 255, 0.5) !important;
+}
+
+.admin-save-all:hover,
+.admin-delete-all:hover,
+.admin-add:hover,
+.admin-add-file:hover,
+.admin-remove:hover {
+  color: rgb(60, 60, 60);
+  opacity: 0.8;
+}
+.edit-controls {
+  background: rgb(60,60,60);
+  border-radius: 5px;
+}
+
+.password-link {
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: underline;
+  line-height: 220%;
+}
+
+.password-link-login {
+  float: right;
+  font-size: 12px;
+  text-decoration: underline;
+  line-height: 325%;
+}
+
+.failed-login {
+  color: red;
+  font-size: 12px;
+  float: left;
+  line-height: 325%;
+}
+
+.failed-signup {
+  color: red;
+  font-size: 12px;
+  float: right;
+  line-height: 325%;
+}
+
+#login,
+#cancel-login {
+  float: left;
+}
+
+input,
+textarea {
+  border-radius: 0 !important;
+}
+
+.file {
+  display: inline-block;
+  max-width: 5em;
+}
+
+.file i {
+  font-size: 40px;
+  color: rgba(60,60,60);
+}
+
+.file p {
+  font-size: 16px;
+  color: rgba(60,60,60);
+}
+
+@media (max-width: 992px) {
+
+  .error-box {
+    font-size: 1.5em;
+    font-family : "Alegreya", serif;
+    bottom: 0;
+    border: solid !important;
+    border-width: 10px;
+  	border-color: rgb(220,220,220);
+    color: rgb(220,220,220);
+    background: rgba(0,0,0,0.3)
+  }
+
+  .bg-img-error {
+    background-position: 25% 0%
+  }
+}

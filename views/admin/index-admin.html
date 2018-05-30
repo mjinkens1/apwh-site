@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <!-- <script type="text/javascript" src="http://livejs.com/live.js"></script> -->
+  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <title>AP World History</title>
+
+  <link rel="shortcut icon" href="/../images/favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.css'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Alegreya'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Arvo'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Ubuntu'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=PT+Sans'>
+  <link rel="stylesheet"href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css">
+  <link rel="stylesheet" href="/../stylesheets/style.css">
+
+</head>
+<body>
+<body>
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-5 col-lg-3 sidebar collapse p-0" id="sidebar" aria-expanded="false">
+      <div class="list-group panel m-0 p-0">
+        <div class="panel p-0 m-0">
+          <a href="/../apwh/admin/syllabus" class="list-group-item pr-0 mr-0" data-parent="#sidebar">
+            <i class="fa fa-pencil-alt text-warning px-2"></i><span class="hidden-sm-down">Syllabus</span>
+          </a>
+          <a href="/../apwh/admin/technology&environment" class="list-group-item pr-0 mr-0" data-parent="#sidebar">
+           <i class="fa fa-tree text-success pl-1 pr-1"></i> <span class="hidden-sm-down">1. Technology & Environment</span>
+          </a>
+          <a href="/../apwh/admin/organizationofsocieties" class="list-group-item pr-0 mr-0" data-parent="#sidebar">
+           <i class="fa fa-users text-primary pr-1"></i> <span class="hidden-sm-down">2. Organization of Societies</span>
+          </a>
+          <a href="/../apwh/admin/regionalinteractions" class="list-group-item"data-parent="#sidebar">
+           <i class="fa fa-map-marker text-danger pl-1 pr-2"></i> <span class="hidden-sm-down">3. Regional Interactions</span>
+          </a>
+          <a href="/../apwh/admin/globalinteractions" class="list-group-item"data-parent="#sidebar">
+           <i class="fa fa-globe text-info pl-0 pr-2"></i> <span class="hidden-sm-down">4. Global Interactions</span>
+          </a>
+          <a href="/../apwh/admin/industrialization&integration" class="list-group-item" data-parent="#sidebar">
+           <i class="fa fa-cogs text-muted pl-0 pr-1"></i> <span class="hidden-sm-down">5. Industrialization & Integration</span>
+          </a>
+          <a href="/../apwh/admin/acceleratingglobalchange" class="list-group-item" data-parent="#sidebar">
+           <i class="fa fa-tachometer-alt text-warning pl-0 pr-1"></i> <span class="hidden-sm-down">6. Accelerating Global Change</span>
+          </a>
+          <a href="/../apwh/admin/apprep" class="list-group-item" data-parent="#sidebar">
+            <i class="fas fa-newspaper text-info pl-0 pr-3"></i><span class="hidden-sm-down">AP Prep</span>
+          </a>
+          <div class="list-group-item p-0 m-0" data-parent="#sidebar" id="link-update">
+            <a href="https://drive.google.com/open?id=1IliNBgmX1ufIheV6-w1ywcIMEpbIGbya" class="list-group-item" data-parent="#sidebar">
+             <i class="fa fa-trophy text-info pl-0 pr-3"></i><span class="hidden-sm-down">Social Studies UIL</span>
+            </a>
+            <div class="card" id="ssuil">
+              <form action="/save-content" method="post">
+                <input type="text" class="form-control" placeholder="">
+                <button type="submit" class="btn btn-block btn-dark rounded-0" style="float: right;">Update Link</button>
+              </form>
+            </div>
+          </div>
+          <a href="#" class="list-group-item" data-parent="#sidebar" id="email"><i class="fa fa-envelope text-info pl-0 pr-2"></i> <span class="hidden-sm-down"> Email</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-expand fixed-top theme1">
+  <a class="theme2" href="#sidebar" data-toggle="collapse" id="sidebar-toggle">
+    <span class="fa-stack fa-1x">
+      <i class="fa fa-bars fa-lg pt-2"></i>
+    </span>
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link theme2 nav-icon" href="" id="home"><i class="fa fa-fw fa-home fa-lg ml-2"></i><span class="sr-only">(current)</span></a>
+        <div class="tooltip-text ml-2 px-2">Home</div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link theme2 nav-icon" href="#" id=calendar-icon><i class="fa fa-fw fa-calendar fa-lg"></i><span class="sr-only">(current)</span></a>
+        <div class="tooltip-text px-2">Calendar</div </li>
+        <li class="nav-item">
+          <a class="nav-link theme2 nav-icon" href="#" id=announce-icon><i class="fa fa-fw fa-flag fa-lg"></i><span class="sr-only">(current)</span></a>
+          <div class="tooltip-text px-2">Announcements</div>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link theme2 nav-icon" href="#" id=parents-icon><i class="fa fa-fw fa-user fa-lg"></i><span class="sr-only">(current)</span></a>
+          <div class="tooltip-text px-2">Parents</div>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <h6 class="mt-2 mr-3" id="username-disp"></h6>
+        <div class="tooltip-text-logout text-center p-0 rounded-0 border border-dark">
+          <form class="form-horizontal text-center m-0" action="/apwh/admin/logout" method="post" name="login-form">
+            <button class="btn btn-dark btn-block rounded-0"type="submit" id="logout">Logout</button>
+            <a href="./apwh/admin/password" class="password-link">Change/Reset Password</a>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid overlay" href="#sidebar" data-toggle="collapse">
+</div>
+
+<div class="bg-img">
+  <div class="d-none d-lg-block" style="height: 100vh; color: rgb(220, 220, 220);">
+    <div class="container-fluid" style=" position: relative; height: 90vh;">
+      <div class="container text-center m-0 p-0" style="position: sticky; top: 150px; left: 150px; width: 280px;">
+        <h2><span class="heading">Ms. Jinkens</span></h2>
+        <h2>AP World History</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-7 col-md-12 mt-3 d-flex flex-column justify-content-between">
+        <div class="jumbotron p-0 cal-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-lg-4 border-bottom border-left border-dark">
+                <div class="row day-header">
+                  <div class="col-7 p-0 day-of-week-header">
+                    <h4 class="text-center day-of-week"><span id="day-selection-name"></span></h4>
+                  </div>
+                  <div class="col-5">
+                    <div class="row h-100">
+                      <div class="col-12 text-center day-number-header p-0 pt-4">
+                        <h3 class="text-center" id="day-selection-number"></h3>
+                        <h3 class="text-center ml-0" id="month-selection"></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col p-0">
+                    <div id="accordion">
+                      <div class="card h-100">
+                        <div class="card-header" id="headingOne">
+                          <h6 class="mb-0">Assignments (<span id="assignment-count">0</span>)
+                            <i class="collapsed card-button m-0 p-0 ml-3 py-auto fas fa-minus pt-1" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="assign-btn"></i>
+                            <a href="" class="fas fa-check admin admin-save-all ml-3 pt-1" data-target="#cal-assignments" data-type="cal-announcement" title="Save all changes"></a>
+                            <a href="" class="fas fa-times-circle admin admin-remove ml-3 pt-1" data-target="#cal-assignments" title="Remove content"></a>
+                            <a href="" class="fas fa-plus-circle admin admin-add pt-1" data-target="#cal-assignments" data-type="cal-announcement" data-parent="#calendar" title="Add content"></a>
+                          </h6>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body p-0 m-0" id="cal-assignments">
+                            <div class="container-fluid info-wrapper mt-2"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h6 class="mb-0">Events (<span id="event-count">0</span>)
+                            <i class="collapsed card-button m-0 p-0 ml-3 pt-1 fas fa-plus" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="events-btn"></i>
+                            <a href="" class="fas fa-check admin admin-save-all ml-3 pt-1" data-target="#cal-events" data-type="cal-announcement" title="Save all changes"></a>
+                            <a href="" class="fas fa-times-circle admin admin-remove ml-3 pt-1" data-target="#cal-events" title="Remove content"></a>
+                            <a href="" class="fas fa-plus-circle admin admin-add pt-1" data-target="#cal-events" data-type="cal-announcement" data-parent="#calendar" title="Add content"></a>
+                          </h6>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body p-0 m-0" id="cal-events">
+                            <div class="container-fluid info-wrapper mt-2"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h6 class="mb-0">Miscellaneous (<span id="misc-count">0</span>)
+                            <i class="collapsed card-button m-0 p-0 ml-3 pt-1py-auto fas fa-plus" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="misc-btn"></i>
+                            <a href="" class="fas fa-check admin admin-save-all ml-3 pt-1" data-target="#cal-misc" data-type="cal-announcement" title="Save all changes"></a>
+                            <a href="" class="fas fa-times-circle admin admin-remove ml-3 pt-1" data-target="#cal-misc" title="Remove content"></a>
+                            <a href="" class="fas fa-plus-circle admin admin-add pt-1" data-target="#cal-misc" data-type="cal-announcement" data-parent="#calendar" title="Add content"></a>
+                          </h6>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body p-0 m-0" id="cal-misc">
+                            <div class="container-fluid info-wrapper mt-2"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-8">
+                <div class="container-fluid p-0" id="calendar">
+                  <div class="row">
+                    <div class="col-3 calendar-header text-right m-0 p-0">
+                      <a href="#" id="last-month" class="fa fa-angle-left cal-nav m-0 p-0"></a>
+                    </div>
+                    <div class="col-6 calendar-header-c text-center p-0">
+                      <span class="cal-header-month"></span>
+                      <span><br><span>
+                      <span class="text-center cal-header-year p-0 m-0"></span>
+                    </div>
+                    <div class="col-3  calendar-header text-left m-0 p-0">
+                      <span class="cal-refresh"><a href="#" id="refresh" class="fa fa-undo fa-2x cal-refresh-btn"></a></span>
+                      <a href="#" id="next-month" class="fa fa-angle-right cal-nav"></a>
+                    </div>
+                  </div>
+                  <div class="row calendar-weekdays border-bottom-0 border-left-0 border-right-0 border-dark">
+                    <div class="col pt-1 text-center border-left border-bottom border-dark">S</div>
+                    <div class="col pt-1 text-center border-left border-bottom border-dark">M</div>
+                    <div class="col pt-1 text-center border-left border-bottom border-dark">T</div>
+                    <div class="col pt-1 text-center border-left border-bottom border-dark">W</div>
+                    <div class="col pt-1 text-center border-left border-bottom border-dark">T</div>
+                    <div class="col pt-1 text-center border-left border-bottom border-dark">F</div>
+                    <div class="col pt-1 text-center border-left border-bottom border-right border-dark">S</div>
+                  </div>
+                  <div class="row calendar-week border-bottom-0 border-left-0 border-right-0 border-dark">
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day0"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day1"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day2"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day3"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day4"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day5"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-right border-dark"><span id="day6"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                  </div>
+                  <div class="row calendar-week border-bottom-0 border-left-0 border-right-0 border-dark">
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day7"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day8"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col col-xs-21 calendar-day text-right border-left border-bottom border-dark"><span id="day9"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day10"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day11"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day12"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-right border-dark"><span id="day13"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                  </div>
+                  <div class="row calendar-week border-bottom-0 border-left-0 border-right-0 border-dark">
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day14"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day15"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day16"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day17"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day18"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day19"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-right border-dark"><span id="day20"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                  </div>
+                  <div class="row calendar-week border-bottom-0 border-left-0 border-right-0 border-dark">
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day21"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day22"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day23"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day24"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day25"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day26"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-right border-dark"><span id="day27"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                  </div>
+                  <div class="row calendar-week border-bottom-0 border-left-0 border-right-0 border-dark">
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day28"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day29"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day30"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day31"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day32"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-dark"><span id="day33"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                    <div class="col calendar-day text-right border-left border-bottom border-right border-dark"><span id="day34"></span><span class="w-100 mt-4 px-2 d-flex justify-content-between cal-icons"><i class="fas fa-pencil-alt ml-1" title="Assignments"></i><i class="fas fa-calendar-check ml-1" title="Events"></i><i class="fas fa-info-circle ml-1" title="Miscellaneous"></i></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid p-0 mb-2">
+          <video class="p-0 m-0" width="100%" height="100%" id="cnn10" controls poster="https://cdn.cnn.com/cnnnext/dam/assets/161215172110-sn-1216-00075710-full-169.jpg">
+    <source src="http://podcasts.cnn.net/cnn/big/cnn10/2018/04/26/ten-0427.cnn_ios_1240.mp4" type="video/mp4">
+                </video>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5 mt-3 d-flex flex-column justify-content-between">
+        <div class="card mb-3" id="announcements">
+          <div class="card-header info-header">
+            <h4 class="text-left mb-1">Announcements
+              <i class="fa fa-flag header-icon pt-1 ml-4"></i>
+              <!-- <div class="tooltip-text save-message px-2">Changes saved!</div> -->
+              <a href="" class="fas fa-check admin admin-save-all pt-1 ml-3" data-target="#announcements" data-type="announcement" title="Save all changes"></a>
+              <a href="" class="fas fa-times-circle admin admin-remove pt-1 ml-3" data-target="#announcements" title="Remove content"></a>
+              <a href="" class="fas fa-plus-circle admin admin-add pt-1 ml-3" data-target="#announcements" data-type="announcement" title="Add content"></a>
+            </h4>
+          </div>
+          <div class="card-body p-1">
+            <div class="container-fluid info-wrapper mt-2"></div>
+          </div>
+        </div>
+        <div class="card mb-3" id="parents">
+          <div class="card-header info-header">
+            <h4 class="text-left mb-1">Parents
+              <i class="fa fa-user header-icon pt-1 ml-3"></i>
+              <a href="" class="fas fa-check admin admin-save-all pt-1 ml-3" data-target="#parents" data-type="announcement" title="Save all changes"></a>
+              <a href="" class="fas fa-times-circle admin admin-remove pt-1 ml-3" data-target="#parents" title="Remove content"></a>
+              <a href="" class="fas fa-plus-circle admin admin-add pt-1 ml-3" data-target="#parents" data-type="announcement" title="Add content"></a>
+            </h4>
+          </div>
+          <div class="card-body p-1">
+            <div class="container-fluid info-wrapper mt-2"></div>
+          </div>
+        </div>
+        <div class="card mb-3" id="other">
+          <div class="card-header info-header">
+            <h4 class="text-left mb-1">Other Stuff
+              <i class="fa fa-newspaper header-icon pt-1 ml-3"></i>
+              <a href="" class="fas fa-check admin admin-save-all pt-1 ml-3" data-target="#other" data-type="announcement" title="Save all changes"></a>
+              <a href="" class="fas fa-times-circle admin admin-remove pt-1 ml-3" data-target="#other" title="Remove content"></a>
+              <a href="" class="fas fa-plus-circle admin admin-add pt-1 ml-3" data-target="#other" data-type="announcement" title="Add content"></a>
+            </h4>
+          </div>
+          <div class="card-body p-1">
+            <div class="container-fluid info-wrapper mt-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid footer">
+    <div class="row">
+      <div class="col-3 offset-1 footer-col text-left mt-3">
+        <h6 class="footer-info1">Danielle Jinkens</h6>
+        <p>Science & Engineering Magnet<br>AP World History<br>AP Human Geography<br><!--<a href="mailto:webmaster@example.com" target="_">djinkens@dallasisd.org</a>--></p>
+      </div>
+      <div class="col-7 footer-col text-left mt-3">
+        <h6 class="footer-info2">Site Map</h6>
+        <div class="container-fluid d-flex justify-content-between p-0">
+          <div class="container p-0">
+            <p><a href="./apwh" id="map-home">Home</a><br><a href="../apwh/admin/syllabus">Syllabus</a><br>
+            <a href="./apwh/admin/technology&environment">Technology & Environment</a><br><a href="./apwh/admin/organizationofsocieties">Organization of Societies</a></p>
+          </div>
+          <div class="container p-0">
+            <p><a href="./apwh/admin/regionalinteractions">Regional Interactions</a><br><a href="./apwh/admin/globalinteractions" id="map-calendar">Global Interactions</a><br>
+            <a href="./apwh/admin/industrialization&integration">Industrialization & Integration</a><br><a href="./apwh/admin/acceleratingglobalchange">Accelerating Global Change</a></p>
+          </div>
+          <div class="container p-0">
+            <p><a href="./apwh/admin/apprep">AP Prep</a><br>
+            <a href="https://drive.google.com/open?id=1IliNBgmX1ufIheV6-w1ywcIMEpbIGbya">Social Studies UIL</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid popup">
+  <div class="row" id="email-wrapper">
+    <div class="col-12 col-lg-6 offset-lg-3 mt-5">
+      <div class="card h-100">
+        <div class="card-header info-header">
+          <h4 class="text-left mb-1">Email
+            <i class="fas fa-envelope header-icon pt-1"></i>
+          </h4>
+        </div>
+        <div class="card-body p-3 px-4">
+          <form class="form-horizontal" name="email-form">
+            <div class="form-group text-left">
+              <label for="name-input">Name</label>
+              <input type="text" class="form-control" name="name-input" placeholder="">
+            </div>
+            <div class="form-group text-left">
+              <label for="email-input">Email</label>
+              <input type="email" class="form-control" name="email-input" placeholder="">
+            </div>
+            <div class="form-group text-left">
+              <label for="message-input">Message</label>
+              <textarea class="form-control" placeholder="" name="message-input" style="height: 100px;"></textarea>
+            </div>
+          </form>
+          <button class="btn btn-dark rounded-0" type="submit" id="send-message">Send Message</button>
+          <button class="btn btn-dark rounded-0" type="submit" id="cancel-message">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js'></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+  <script  src="/../javascripts/index-admin.js"></script>
+
+
+</body>
+
+</html>
