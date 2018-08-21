@@ -6,6 +6,8 @@ $('#sidebar').css('top', '58px');
 $(document).ready(function() {
   var href = document.location.href;
   var lastPathSegment = href.substr(href.lastIndexOf('/') + 1).split('-')[0].split('#')[0];
+
+
 //Set accordion state closed for small screens==================================================================================================================================================================================
   if($(window).width() < 992) {
     $('#assign-btn').attr('aria-expanded', 'false');
@@ -423,7 +425,9 @@ $(document).ready(function() {
         for(i = 0; i < Object.keys(data).length; ++i) {
           $(`#${data[i].content.id}`).find('.airnote').summernote('code', data[i].content.contentHTML);
         };
-        calendar.showContent(calendar.mm, calendar.yyyy);
+        if(lastPathSegment === 'index') {
+          calendar.showContent(calendar.mm, calendar.yyyy);
+        }
         $('.editor-hidden').hide();
         $('.admin-delete').hide();
       },
@@ -449,6 +453,7 @@ $(document).ready(function() {
   // };
 
   function addContent(event) {
+
     $.ajax({
       url: '/apwh/admin/add-content',
       data: {
@@ -457,8 +462,8 @@ $(document).ready(function() {
         'parentFile': lastPathSegment,
         'filepath': '',
         'day': '#' + $('#calendar').find('.calendar-active > span').attr('id'),
-        'month': calendar.sm,
-        'year': calendar.sy
+        'month': lastPathSegment === 'index' ? calendar.sm : '',
+        'year': lastPathSegment === 'index' ? lastcalendar.sy : ''
      },
       type: 'POST',
       success: function (data) {

@@ -145,7 +145,7 @@ module.exports = function(passport) {
     res.sendFile(path.join(__dirname + "/../views/admin/socialstudiesuil.html"));
   });
 
-  router.post('/apwh/admin/add-content', function(req, res, next) {
+  router.post('/whap/admin/add-content', function(req, res, next) {
     var templateContent = contentTemplate.newContent(req.body.contentType);
     console.log(req.body)
     var newContent = new Content({
@@ -169,13 +169,13 @@ module.exports = function(passport) {
     });
   });
 
-  router.post('/apwh/admin/add-file', upload.any(), function(req, res, next) {
+  router.post('/whap/admin/add-file', upload.any(), function(req, res, next) {
     console.log(req.body, 'Body');
     console.log(req.files, 'files');
     res.end();
   });
 
-  router.delete('/apwh/admin/remove-content', function(req, res, next) {
+  router.delete('/whap/admin/remove-content', function(req, res, next) {
     // Content.remove({'content.contentType': 'file'})
       Content.remove({'content.id': req.body.id })
     .then(function(err, obj) {
@@ -186,7 +186,7 @@ module.exports = function(passport) {
     });
   });
 
-  router.post('/apwh/admin/save-content', function(req, res, next) {
+  router.post('/whap/admin/save-content', function(req, res, next) {
     var i;
     var id;
     var html;
@@ -204,7 +204,7 @@ module.exports = function(passport) {
     res.send('Changes saved!');
   });
 
-  router.post('/apwh/load-content', function(req, res, next) {
+  router.post('/whap/load-content', function(req, res, next) {
     Content.find(req.body, function(err, content) {
       if(err){
          console.error(err);
@@ -214,13 +214,13 @@ module.exports = function(passport) {
     });
   });
 
-  router.post('/apwh/load-rss', function(req, res, next) {
+  router.post('/whap/load-rss', function(req, res, next) {
     rss.getRSS().then((data) => {
       res.send(data)
     })
   });
 
-  router.post('/apwh/send-message', function(req, res, next) {
+  router.post('/whap/send-message', function(req, res, next) {
 
     var email_obj = req.body;
     var mailOptions = {
